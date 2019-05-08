@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input type="text" id="nhap">
+    <input type="button" value="Add" id="to" onclick="them()">
+    <input type="button" value="Display" id="uot" onclick="hienthi()">
+    <div id="rs">Result</div>
+    <script>
+        let x=0;
+        let tt=[];
+        function them() {
+            tt[x]=document.getElementById("nhap").value;
+            x++;
+            document.getElementById("nhap").value=""
+        }
+        function hienthi() {
+            let a="<p/>"
+            for (i=0 ; i < tt.length ; i++){
+                a+= "phan tu " + "("+i+")" +  " = " + tt[i] + "<br>"
+            }
+            document.getElementById("rs").innerHTML=a;
+        }
+    </script>
+
+</body>
+</html>
